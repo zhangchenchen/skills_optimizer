@@ -51,8 +51,8 @@ Recommended markdown shape:
   - Found active copies in multiple directories
   - Similar purpose and overlapping files indicate maintenance duplication
 - Why it matters: Duplicate active copies raise maintenance cost and can create trigger ambiguity.
-- Recommended action: `合并`
-- Available actions: `修复 / 合并 / 删除 / 保留并跳过`
+- Recommended action: `Merge`
+- Available actions: `Fix / Merge / Delete / Keep and Skip`
 ```
 
 ## Action Queue Record
@@ -64,9 +64,9 @@ Use this shape:
 ```md
 - `I01`
   Title: Duplicate copies of `baoyu-url-to-markdown`
-  Recommendation: `合并`
+  Recommendation: `Merge`
   Why: There are multiple active copies and no clear canonical source.
-  Options: `修复 / 合并 / 删除 / 保留并跳过`
+  Options: `Fix / Merge / Delete / Keep and Skip`
 ```
 
 If the UI or conversation format benefits from more structure, the same information can be expressed in YAML-like blocks:
@@ -82,25 +82,25 @@ confidence: high
 evidence:
   - Multiple active copies found in visible skill roots
 why_it_matters: Duplicate active copies make maintenance and triggering less predictable
-recommended_action: 合并
-available_actions:
-  - 修复
-  - 合并
-  - 删除
-  - 保留并跳过
+ recommended_action: Merge
+ available_actions:
+  - Fix
+  - Merge
+  - Delete
+  - Keep and Skip
 ```
 
 ## Action Semantics
 
 Keep the four actions stable:
 
-- `修复`
+- `Fix`
   Update metadata, trigger wording, safety language, structure, or stale files.
-- `合并`
+- `Merge`
   Consolidate duplicate or overlapping skills into a clearer single source of truth.
-- `删除`
+- `Delete`
   Remove the selected skill or duplicate copy after the user explicitly chooses deletion.
-- `保留并跳过`
+- `Keep and Skip`
   Record the finding as reviewed for now, but make no changes.
 
 ## User Reply Format
@@ -108,10 +108,10 @@ Keep the four actions stable:
 Prompt the user to reply using one line per action:
 
 ```text
-I01 -> 修复
-I02 -> 合并
-I03 -> 删除
-I04 -> 保留并跳过
+I01 -> Fix
+I02 -> Merge
+I03 -> Delete
+I04 -> Keep and Skip
 ```
 
 If a chosen action is ambiguous, ask a narrow follow-up question before editing files.

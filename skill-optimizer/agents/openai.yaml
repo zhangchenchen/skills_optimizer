@@ -1,4 +1,4 @@
 interface:
   display_name: "Skill Optimizer"
-  short_description: "审计 skills 并生成可执行改进清单"
-  default_prompt: "Use $skill-optimizer to audit the current conversation and local skills, then produce a detailed report with actions the user can choose: 修复, 合并, 删除, or 保留并跳过."
+  short_description: "Audit skills and generate an actionable cleanup plan"
+  default_prompt: "Use $skill-optimizer to audit the current conversation and local skills, then produce a detailed report with actions the user can choose: Fix, Merge, Delete, or Keep and Skip."

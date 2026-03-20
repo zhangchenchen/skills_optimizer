@@ -3,8 +3,8 @@
   "evals": [
     {
       "id": 1,
-      "prompt": "请审计我当前仓库里的 skills，并结合这次对话看看哪些地方本来该触发 skill 但没有触发，最后给我一份详细报告和可选动作清单。",
-      "expected_output": "A detailed audit of the current thread and local skills, with evidence-backed findings and an action queue limited to 修复 / 合并 / 删除 / 保留并跳过.",
+      "prompt": "Please audit the skills in my current workspace and use this conversation as evidence to find places where a skill should have triggered but did not. End with a detailed report and an action queue.",
+      "expected_output": "A detailed audit of the current thread and local skills, with evidence-backed findings and an action queue limited to Fix / Merge / Delete / Keep and Skip.",
       "files": [],
       "expectations": [
         "The report distinguishes between current-thread evidence and global usage assumptions",
@@ -14,7 +14,7 @@
     },
     {
       "id": 2,
-      "prompt": "我怀疑有一些重复的 skill、一些 metadata 写得太弱，还有几个高风险 skill 没写安全边界。请你做一个 skill optimizer 式的治理报告。",
+      "prompt": "I suspect there are duplicate skills, weak metadata, and a few high-risk skills with poor guardrails. Produce a governance-style audit report.",
       "expected_output": "A governance-style audit that identifies duplicate skills, weak metadata, and risky skills, then recommends concrete next steps without editing files yet.",
       "files": [],
       "expectations": [
@@ -25,7 +25,7 @@
     },
     {
       "id": 3,
-      "prompt": "请基于当前对话和本地已安装的 skills，帮我整理一个 action queue，让我选择哪些修复、哪些合并、哪些删除、哪些先跳过。",
+      "prompt": "Based on the current conversation and my locally installed skills, produce an action queue so I can choose what to fix, merge, delete, or keep and skip.",
       "expected_output": "A concise but structured action queue with user-selectable options for each finding.",
       "files": [],
       "expectations": [

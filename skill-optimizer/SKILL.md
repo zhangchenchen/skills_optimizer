@@ -101,10 +101,10 @@ Keep findings evidence-based. If something is an inference rather than a direct 
 
 Every action item must expose exactly these user-facing actions:
 
-- `修复`
-- `合并`
-- `删除`
-- `保留并跳过`
+- `Fix`
+- `Merge`
+- `Delete`
+- `Keep and Skip`
 
 Do not introduce extra action labels like `archive` or `disable` in the user-facing menu. If you internally think a "soft delete" is safer, explain that inside the recommendation, but keep the action menu limited to the four agreed options.
 
@@ -119,18 +119,18 @@ Only after the user selects action items should you:
 - merge overlapping skills
 - delete duplicates or obsolete skills
 
-If the user selects `删除`, confirm the exact target before removing files when there is any ambiguity.
+If the user selects `Delete`, confirm the exact target before removing files when there is any ambiguity.
 
 ## Recommendation Heuristics
 
 Use these defaults unless the evidence strongly suggests otherwise:
 
-- missed trigger or weak metadata -> recommend `修复`
-- duplicate or high-overlap skill copies -> recommend `合并`
-- clearly obsolete duplicates or user-rejected leftovers -> recommend `删除`
-- uncertain or disputed findings -> recommend `保留并跳过`
+- missed trigger or weak metadata -> recommend `Fix`
+- duplicate or high-overlap skill copies -> recommend `Merge`
+- clearly obsolete duplicates or user-rejected leftovers -> recommend `Delete`
+- uncertain or disputed findings -> recommend `Keep and Skip`
 
-For `unused_candidate`, be conservative. Prefer `保留并跳过` or `修复` over `删除` unless the user explicitly wants aggressive cleanup.
+For `unused_candidate`, be conservative. Prefer `Keep and Skip` or `Fix` over `Delete` unless the user explicitly wants aggressive cleanup.
 
 ## Report Style
 
@@ -153,14 +153,14 @@ Example response pattern:
 
 ```md
 Action Queue
-- I01: Recommend `修复`
-- I02: Recommend `合并`
-- I03: Recommend `保留并跳过`
+- I01: Recommend `Fix`
+- I02: Recommend `Merge`
+- I03: Recommend `Keep and Skip`
 
 Reply with selections such as:
-- `I01 -> 修复`
-- `I02 -> 合并`
-- `I03 -> 保留并跳过`
+- `I01 -> Fix`
+- `I02 -> Merge`
+- `I03 -> Keep and Skip`
 ```
 
 ## Boundaries

@@ -10,10 +10,10 @@
 - spots risky skills that need clearer guardrails
 - separates analysis from execution
 - limits user-facing actions to:
-  - `修复`
-  - `合并`
-  - `删除`
-  - `保留并跳过`
+  - `Fix`
+  - `Merge`
+  - `Delete`
+  - `Keep and Skip`
 
 ## Package Layout
 

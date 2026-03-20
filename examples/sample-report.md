@@ -19,8 +19,8 @@ Three themes stand out:
   - Multiple visible copies were found in active skill roots
   - Descriptions overlap and create no clear canonical source
 - Why it matters: Duplicate active copies make future fixes inconsistent.
-- Recommended action: `合并`
-- Available actions: `修复 / 合并 / 删除 / 保留并跳过`
+- Recommended action: `Merge`
+- Available actions: `Fix / Merge / Delete / Keep and Skip`
 
 ### Metadata Quality Issues
 
@@ -31,8 +31,8 @@ Three themes stand out:
   - The body explains bundle-based input clearly
   - The frontmatter does not strongly say that it expects a Chinese opinion draft, not raw English source material
 - Why it matters: The skill may under-trigger or get used too early.
-- Recommended action: `修复`
-- Available actions: `修复 / 合并 / 删除 / 保留并跳过`
+- Recommended action: `Fix`
+- Available actions: `Fix / Merge / Delete / Keep and Skip`
 
 ### Risk And Safety Review
 
@@ -43,33 +43,33 @@ Three themes stand out:
   - The workflow supports real write actions to WeChat
   - The confirmation step was not prominent enough
 - Why it matters: High-consequence actions should confirm target account and publish intent before execution.
-- Recommended action: `修复`
-- Available actions: `修复 / 合并 / 删除 / 保留并跳过`
+- Recommended action: `Fix`
+- Available actions: `Fix / Merge / Delete / Keep and Skip`
 
 ## Action Queue
 
 - `I01`
   Title: Duplicate copies of `rss-source-picker`
-  Recommendation: `合并`
+  Recommendation: `Merge`
   Why: Multiple active copies create drift and no single source of truth.
-  Options: `修复 / 合并 / 删除 / 保留并跳过`
+  Options: `Fix / Merge / Delete / Keep and Skip`
 
 - `I02`
   Title: `social-polish` needs stronger metadata
-  Recommendation: `修复`
+  Recommendation: `Fix`
   Why: The body is clear, but the trigger description is still weaker than the real usage boundary.
-  Options: `修复 / 合并 / 删除 / 保留并跳过`
+  Options: `Fix / Merge / Delete / Keep and Skip`
 
 - `I03`
   Title: `baoyu-post-to-wechat` needs an explicit confirmation gate
-  Recommendation: `修复`
+  Recommendation: `Fix`
   Why: Publish actions should confirm account, input, and draft-only intent before writing.
-  Options: `修复 / 合并 / 删除 / 保留并跳过`
+  Options: `Fix / Merge / Delete / Keep and Skip`
 
 Reply format:
 
 ```text
-I01 -> 合并
-I02 -> 修复
-I03 -> 保留并跳过
+I01 -> Merge
+I02 -> Fix
+I03 -> Keep and Skip
 ```
